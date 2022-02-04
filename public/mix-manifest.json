@@ -1,6 +1,12 @@
 {
-    "/js/admin.js": "/js/admin.js",
     "/js/app.js": "/js/app.js",
+    "/js/admin.js": "/js/admin.js",
     "/css/admin.css": "/css/admin.css",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/img/272303379_116531640906762_1963481357961367445_n.jpg": "/img/272303379_116531640906762_1963481357961367445_n.jpg",
+    "/img/about-bg.jpg": "/img/about-bg.jpg",
+    "/img/contact-bg.jpg": "/img/contact-bg.jpg",
+    "/img/home-bg.jpg": "/img/home-bg.jpg",
+    "/img/post-bg.jpg": "/img/post-bg.jpg",
+    "/img/post-sample-image.jpg": "/img/post-sample-image.jpg"
 }
