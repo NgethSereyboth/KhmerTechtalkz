@@ -9,11 +9,11 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/34f5032078.js" crossorigin="anonymous"></script>
     @yield('styles_scripts')
 
 </head>
@@ -26,85 +26,85 @@
 
       <div class="container px-4 px-lg-5">
 
-        <a 
-          class="navbar-brand" 
+        <a
+          class="navbar-brand"
           href={{ route('home.index') }}
         >
-          Start Bootstrap
+          KhmerTechTalks
         </a>
 
-        <button 
-          class="navbar-toggler" 
-          type="button" 
-          data-bs-toggle="collapse" 
-          data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" 
-          aria-expanded="false" 
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+          aria-expanded="false"
           aria-label="Toggle navigation"
         >
             Menu
           <i class="fas fa-bars"></i>
         </button>
 
-        <div 
+        <div
           class="
-            collapse 
-            navbar-collapse 
-            d-flex 
-            justify-content-between 
+            collapse
+            navbar-collapse
+            d-flex
+            justify-content-between
             align-items-center
-          " 
+          "
           id="navbarResponsive"
         >
 
           <ul class="navbar-nav ms-auto py-4 py-lg-0">
 
             <li class="nav-item">
-              <a 
-                class="nav-link px-lg-3 py-3 py-lg-4" 
+              <a
+                class="nav-link px-lg-3 py-3 py-lg-4"
                 href="#who-we-are"
               >
                 Who we are
               </a>
             </li>
-            
-            <li 
+
+            <li
               class="nav-item"
             >
-              <a 
-                class="nav-link px-lg-3 py-3 py-lg-4" 
+              <a
+                class="nav-link px-lg-3 py-3 py-lg-4"
                 href="#what-we-do"
               >
                 What we do
               </a>
             </li>
-            
-            <li 
+
+            <li
               class="nav-item"
             >
-              <a 
-                class="nav-link px-lg-3 py-3 py-lg-4" 
+              <a
+                class="nav-link px-lg-3 py-3 py-lg-4"
                 href="#donate"
               >
                 Donate
               </a>
             </li>
-            
-            <li 
+
+            <li
               class="nav-item"
             >
-              <a 
-                class="nav-link px-lg-3 py-3 py-lg-4" 
+              <a
+                class="nav-link px-lg-3 py-3 py-lg-4"
                 href="#career"
               >
                 Career
               </a>
             </li>
-            
-            <li 
+
+            <li
               class="nav-item"
             >
-              <a 
-                class="nav-link px-lg-3 py-3 py-lg-4" 
+              <a
+                class="nav-link px-lg-3 py-3 py-lg-4"
                 href={{ route('home.contact') }}
               >
                 Contact
@@ -116,58 +116,58 @@
 
           @if (auth ()-> check())
 
-              <div 
+              <div
                 class="
                   d-flex
                   justify-content-center
                   align-items-center
                 "
               >
-                
+
                 <div class="dropdown">
 
-                  <button 
-                    class="btn btn-secondary dropdown-toggle" type="button" 
-                    id="dropdownMenuButton" 
-                    data-toggle="dropdown" 
-                    aria-haspopup="true" 
+                  <button
+                    class="btn btn-secondary dropdown-toggle" type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
                     aria-expanded="false"
                   >
                     {{ auth ()->user ()->name }}
                   </button>
 
-                  <div 
+                  <div
                     class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
                     @if (
                       auth ()->user ()->role->label === "admin" ||
-                      auth ()->user ()->role->label === "developer" 
+                      auth ()->user ()->role->label === "developer"
                     )
-                      <a 
+                      <a
                         class="dropdown-item"
                         href="{{ route ('admin.index') }}"
                       >
                         Admin site
                       </a>
                     @endif
-                    
-                    <form 
+
+                    <form
                       class="dropdown-item"
                       method="POST"
                       action="{{ route('logout') }}"
                     >
                       @csrf
-                      
-                      <button 
+
+                      <button
                         type="submit"
                         style="
                           background: transparent;
-                          border: none; 
+                          border: none;
                         "
                       >
                         Logout
                       </button>
-                    
+
                     </form>
 
                   </div>
@@ -185,29 +185,29 @@
     </nav>
 
     <!-- Page Header-->
-    <header 
-      class="masthead" 
+    <header
+      class="masthead"
       style="background-image: url({{ asset('/img/home-bg.jpg') }})"
     >
 
       <div class="container position-relative px-4 px-lg-5">
-        
+
         <div class="row gx-4 gx-lg-5 justify-content-center">
-          
+
           <div class="col-md-10 col-lg-8 col-xl-7">
-            
+
             <div class="site-heading">
-              
+
               <h1>KhmerTechInsider</h1>
-              
+
               <span class="subheading">Tech Sharing</span>
-            
+
             </div>
-          
+
           </div>
-        
+
         </div>
-      
+
       </div>
 
     </header>

@@ -3,7 +3,7 @@
   <h3 class="text-center">CAREER</h3>
 
   <p class="lead">
-    If you are interested in working with our project. Do not hestitate to sent us your Curriculum Vitae to this G-mail: sereybot164@gmail.com
+    If you are interested in working with our project. Do not hestitate to contact us on Facebook with the social media below.
   </p>
 
 </div>

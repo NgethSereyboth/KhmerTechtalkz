@@ -4,7 +4,7 @@
 
   <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}" defer></script>
-    
+
   <!-- Styles -->
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
@@ -16,7 +16,7 @@
   <div class="container">
 
     <div class="card mt-5 mb-5 pl-5 pr-5">
-      
+
       <h2
         class="mt-3 mb-3"
       >
@@ -25,9 +25,9 @@
 
       <div>
 
-        <img 
+        <img
           class="img-fluid"
-          src="{{ asset('storage/'.$article->image) }}" 
+          src="{{ asset('storage/'.$article->image) }}"
           alt="{{ $article->title }}"
         >
 
