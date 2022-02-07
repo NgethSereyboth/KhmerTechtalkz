@@ -1,6 +1,16 @@
 import { Controller } from "stimulus"
-
+let ClassicEditor = require ('@ckeditor/ckeditor5-build-classic')
 export default class extends Controller {
+
+  connect = () => {
+
+    document.querySelectorAll ('textarea').forEach (textarea => {
+
+        ClassicEditor
+          .create (textarea)
+
+      })
+  }
 
   openPopUpModal = e => {
 
@@ -9,17 +19,17 @@ export default class extends Controller {
 
     if (!articleRow) {
       return
-    } 
+    }
 
-    let articleTitle 
+    let articleTitle
       = articleRow.querySelector ('.admin-article-title')
-    let articleContent 
+    let articleContent
       = articleRow.querySelector ('.admin-article-content')
     let articleImage
       = articleRow.querySelector ('.admin-article-image')
-    let modelPopUpTitle 
+    let modelPopUpTitle
       = document.querySelector ('#pop-up-modal-title')
-    let modelPopUpContent 
+    let modelPopUpContent
       = document.querySelector ('#pop-up-modal-content')
 
     switch (true) {
@@ -36,14 +46,14 @@ export default class extends Controller {
 
     }
 
-    modelPopUpTitle.innerHTML 
+    modelPopUpTitle.innerHTML
       = articleTitle.getAttribute ('data-title')
 
     let div = document.createElement ('img')
     div.src = articleImage.getAttribute ('data-image')
     div.classList.add ("img-fluid")
 
-    modelPopUpContent.innerHTML 
+    modelPopUpContent.innerHTML
       = articleContent.getAttribute ('data-content')
 
     modelPopUpContent.append (div)

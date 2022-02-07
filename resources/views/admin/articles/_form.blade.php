@@ -19,24 +19,24 @@
     {!! Form::text('title', 'title') !!}
   </div>
 
-  <div>
-    {!! Form::text('content', 'content') !!}
+  <div data-controller="admin-article">
+    {!! Form::textarea('content', 'content') !!}
   </div>
 
   <div class="form-group">
     <label for="image">Upload image for the article</label>
-    <input 
-      id="image" 
-      type="file" 
+    <input
+      id="image"
+      type="file"
       class="form-control-file"
       name="image"
       accept="image/png, image/gif, image/jpeg"
     >
 
     @isset($article)
-      <img 
+      <img
         class="img-fluid mt-5"
-        src="{{ asset('storage/'.$article->image) }}" 
+        src="{{ asset('storage/'.$article->image) }}"
         alt="{{ $article->title }}"
       >
     @endisset

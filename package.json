@@ -23,5 +23,9 @@
         "stimulus": "^3.0.1",
         "vue": "^2.5.17",
         "vue-template-compiler": "^2.6.10"
+    },
+    "dependencies": {
+        "@ckeditor/ckeditor5-build-classic": "^32.0.0",
+        "ckeditor4": "^4.17.1"
     }
 }
